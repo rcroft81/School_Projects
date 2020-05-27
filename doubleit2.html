@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+	<title>Double the number</title>
+</head>
+
+<body>
+
+  <h5> Roger Croft == CS 1030 == March 4, 2009 == HW 9 (7.5) </h5>
+  <p> Enter a Number and you can double it</p>
+  <p>
+  <input type="text" id="numberBox" size="12" value="1" /> 
+  </p>
+
+  <p>
+  <input type="button" value="Double it" 
+        onclick="num=document.getElementById('numberBox').value;
+                 num=parseFloat(num);
+                 document.getElementById('numberBox').value = 2 * num; " />
+  </p>
+
+
+  <p>
+  <input type="button" value="Divide by 2" 
+        onclick="nUm=document.getElementById('numberBox').value;
+                 nUm=parseFloat(nUm);
+                 document.getElementById('numberBox').value = nUm / 2; " />
+  </p>
+  <p>
+  <input type="button" value="Subtract 1" 
+        onclick="nuM=document.getElementById('numberBox').value;
+                 nuM=parseFloat(nuM);
+                 document.getElementById('numberBox').value = nuM - 1; " />
+  </p>
+  <p>
+  <input type="button" value="Add 1" 
+        onclick="nUM=document.getElementById('numberBox').value;
+                 nUM=parseFloat(nUM);
+                 document.getElementById('numberBox').value = 1 + nUM; " />
+  </p>
+
+  
+  <p>
+    <a href="http://validator.w3.org/"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+
+</body>
+
+</html>

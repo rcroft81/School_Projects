@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+  <title>Die Rolls (11.11)</title>
+  <script type=" text/javascript" src="http://dave-reed.com/book/random.js"></script>
+  <script type="text/javascript">
+	function Roll()
+	//Assumes: die images are displayed as button is clicked
+	//Results: displays a randomly selected image of a die of six
+	{
+	var roll;
+	var roll1;
+
+	roll = RandomInt(1,6);
+	roll1 = RandomInt(1,6);
+
+	document.getElementById("die").src = "http://dave-reed.com/book/Images/die" + roll + ".gif";
+	
+	document.getElementById("die1").src = "http://dave-reed.com/book/Images/die" + roll1 + ".gif";
+
+	document.getElementById("numRolls").value = 
+		parseFloat(document.getElementById("numRolls").value) +1;
+	
+	if ( roll == roll1 ) {
+		document.getElementById("doubRolls").value = 
+			parseFloat(document.getElementById("doubRolls").value) + 1;
+	}
+	}
+	
+	function Reset()
+	// resets the counters to zero
+	{
+	document.getElementById("numRolls").value = 0;
+	document.getElementById("doubRolls").value = 0;
+	}
+
+  </script>
+</head>
+
+<body>
+
+	<!-- Roger Croft == CS 1030 == April 3, 2009 == HW 12 -->
+  
+      	<p>
+  	<img id="die" alt="die image" src="http://dave-reed.com/book/Images/die1.gif" />
+	<img id="die1" alt="die image" src="http://dave-reed.com/book/Images/die1.gif" />
+      	</p>
+      	
+	<p>
+  	<input type="button" value="Click to Roll"
+          onclick="Roll();" />
+      	</p>
+      	
+	<p>
+	Number of Dice Rolls:<input type="text" value="0" id="numRolls" />
+      	</p>
+      	
+	<p>	
+	Number of Doubles Rolled:<input type="text" value="0" id="doubRolls" />
+      	</p>
+      	
+	<p>
+  	<input type="button" value="Reset Counters"
+          onclick="Reset();" />
+      	</p>  
+</body>
+
+</html>

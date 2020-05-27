@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+	<title>Years to Seconds</title>
+</head>
+
+<body>
+  <h2> Roger Croft == CS 1030 == March 4, 2009 == HW 9 (7.7) </h2>
+
+  <p>
+    You Entered <input type="text" id="yearsBox" size="12" value="27" /> years. That's <input type="text" id="secondsBox" size="20" value="2997907970" /> seconds!
+  </p>
+  
+  <p>  
+    <!-- 1 year = 31 556 926 seconds -->
+    
+    <input type="button" value="Convert Years to Seconds" 
+		onclick="YearsToSeconds = document.getElementById('yearsBox').value;
+			   YearsToSeconds = parseFloat(YearsToSeconds);
+			   secYear = (YearsToSeconds * 31556926);
+			   document.getElementById('secondsBox').value = secYear; "/>
+    
+    <input type="button" value="Convert Seconds to Years" 
+		onclick="SecondsToYears = document.getElementById('secondsBox').value;
+			   SecondsToYears = parseFloat(SecondsToYears);
+			   yearSec = (SecondsToYears / 31556926);
+			   document.getElementById('yearsBox').value = yearSec; "/>
+    
+   
+  </p>
+
+
+ 
+  <p>
+    <a href="http://validator.w3.org/"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+  <title>Die Rolls (11.7)</title>
+  <script type=" text/javascript" src="http://dave-reed.com/book/random.js"></script>
+  <script type="text/javascript">
+	function Roll()
+	//Assumes: die images are displayed as button is clicked
+	//Results: displays a randomly selected image of a die of six
+	{
+	var roll;
+	
+	roll = RandomInt(1,6);
+	
+	document.getElementById("die").src = "http://dave-reed.com/book/Images/die" + roll + ".gif";	
+	}
+
+  </script>
+</head>
+
+<body>
+
+	<!-- Roger Croft == CS 1030 == April 3, 2009 == HW 12 -->
+  
+  <p>
+  	<img id="die" alt="die image" src="http://dave-reed.com/book/Images/die1.gif" />
+  </p>
+
+  <br />
+
+  	<input type="button" value="Click to Roll"
+          onclick="Roll();" />
+
+</body>
+
+</html>

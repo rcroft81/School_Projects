@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+	<title>Temperature Conversion</title>
+</head>
+
+<body>
+  <h2> Roger Croft == CS 1030 == March 4, 2009 == HW 9 (7.1) </h2>
+
+  <br />
+
+  <h2>
+    Enter the high temperature for the day:
+  </h2>
+  <p> Fahrentheit ==>
+    
+    <input type="text" id="fahrBox" size="12" value="88" /> 
+    
+    <input type="button" value="Convert Temp to Celsius" 
+		onclick="tempFahr = document.getElementById('fahrBox').value;
+			   tempFahr = parseFloat(tempFahr);
+			   tempCels = (5/9) * (tempFahr - 32);
+			   document.getElementById('celsBox').value = tempCels; "/>
+  </p>
+  <p> Celsius ==>
+    
+    <input type="text" id="celsBox" size="12" value="40" />
+    
+    <input type="button" value="Convert Temp to Fahrenheit" 
+		onclick="tempCels = document.getElementById('celsBox').value;
+			   tempCels = parseFloat(tempCels);
+			   tempFahr = (tempCels * 1.8) + (32);
+			   document.getElementById('fahrBox').value = tempFahr; "/>
+    
+   
+  </p>
+
+
+  <h2>
+    Enter the low temperature for the day:
+  </h2>
+  
+  <p> Fahrentheit ==>
+
+    <input type="text" id="fahrBox2" size="12" value="32" />
+    
+    <input type="button" value="Convert Temp to Celsius" 
+		onclick="tempFahr = document.getElementById('fahrBox2').value;
+			   tempFahr = parseFloat(tempFahr);
+			   tempCels = (5/9) * (tempFahr - 32);
+			   document.getElementById('celsBox2').value = tempCels; "/>
+  </p>
+  <p> Celsius ==> 
+
+    <input type="text" id="celsBox2" size="12" value="34" />
+
+    <input type="button" value="Convert Temp to Fahrenheit" 
+		onclick="tempCels = document.getElementById('celsBox2').value;
+			   tempCels = parseFloat(tempCels);
+			   tempFahr = (tempCels * 1.8) + (32);
+			   document.getElementById('fahrBox2').value = tempFahr; "/>
+    
+  </p>
+
+  <p>
+    <a href="http://validator.w3.org/"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+
+</body>
+
+</html>
